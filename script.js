@@ -1,10 +1,19 @@
-const home = document.querySelector("#home");
-const who = document.querySelector("#who");
-const portfolio = document.querySelector("#portfolio");
-const contact = document.querySelector("#contact");
+const homeButton = document.querySelector("#home");
+const whoButton = document.querySelector("#who");
+const portfolioButton = document.querySelector("#portfolio");
+const contactButton = document.querySelector("#contact");
 
 function handleHomeClick() {
   window.scrollTo(0, 0);
 }
 
-home.addEventListener("click", handleHomeClick);
+function handleWhoClick() {}
+function handlePortfolioClick() {}
+function handleContactClick() {}
+
+homeButton.addEventListener("click", handleHomeClick);
+whoButton.addEventListener("click", handleWhoClick);
+portfolioButton.addEventListener("click", handlePortfolioClick);
+contactButton.addEventListener("click", handleContactClick);
+
+//commit again

@@ -21,7 +21,9 @@ body {
 .page {
   height: 600px;
   align-items: center;
-  display: flex;
+  display: block;
+  justify-items: center;
+  text-align: center;
 }
 
 .main {
