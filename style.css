@@ -1,16 +1,27 @@
 body {
-  background-color: tomato;
+  background-color: lightblue;
   font-family: "Courier New", Courier, monospace;
+  padding: 10px;
 }
 
-.header {
+.menu {
   background-color: white;
   height: 60px;
+  width: 100%;
   display: flex;
-  border-radius: 10px;
-  justify-content: space-around;
+  border-radius: 30px;
   align-items: center;
+  justify-content: space-around;
   font-size: 25px;
+  position: fixed;
+}
+.menu span {
+  cursor: url("src/clover-cursor.png"), auto;
+}
+.page {
+  height: 600px;
+  align-items: center;
+  display: flex;
 }
 
 .main {
