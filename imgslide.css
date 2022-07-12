@@ -1,0 +1,18 @@
+.images {
+  position: relative;
+  display: flex;
+  margin: 5px;
+}
+
+.album {
+  width: 300px;
+}
+
+.imgBT {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}

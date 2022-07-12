@@ -1,5 +1,5 @@
 const homeButton = document.querySelector("#menu-home");
-const whoButton = document.querySelector("#menu-who");
+const favButton = document.querySelector("#menu-fav");
 const portfolioButton = document.querySelector("#menu-portfolio");
 const contactButton = document.querySelector("#menu-contact");
 
@@ -8,7 +8,7 @@ function handleHomeClick() {
   document.body.style.backgroundColor = "#76ba99";
   document.body.style.transition = "0.5s";
 }
-function handleWhoClick() {
+function handleFavClick() {
   window.scrollTo({ top: 600, behavior: "smooth" });
   document.body.style.backgroundColor = "lightblue";
   document.body.style.transition = "0.5s";
@@ -25,6 +25,6 @@ function handleContactClick() {
 }
 
 homeButton.addEventListener("click", handleHomeClick);
-whoButton.addEventListener("click", handleWhoClick);
+favButton.addEventListener("click", handleFavClick);
 portfolioButton.addEventListener("click", handlePortfolioClick);
 contactButton.addEventListener("click", handleContactClick);

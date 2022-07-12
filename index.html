@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello, I am Jiwon</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="imgslide.css" />
   </head>
   <body>
     <div class="menu">
       <span id="menu-home">Home</span>
-      <span id="menu-who">Who am I</span>
+      <span id="menu-fav">Favorites</span>
       <span id="menu-portfolio">Portfolio</span>
       <span id="menu-contact">Contact</span>
     </div>
@@ -22,7 +23,24 @@
         <p>제 공간에 오신 것을 환영합니다.</p>
       </span>
     </div>
-    <div class="who page">Kim Jiwon</div>
+    <div class="fav page">
+      <div class="album">
+        <h2>What Makes Me Happy</h2>
+        <div class="images">
+          <img src="src/sl0.jpg" style="width: 300px" />
+          <img src="src/sl1.jpeg" style="width: 300px" />
+          <img src="src/sl2.jpeg" style="width: 300px" />
+          <img src="src/sl3.jpeg" style="width: 300px" />
+          <img src="src/sl4.jpg" style="width: 300px" />
+          <img src="src/sl5.jpeg" style="width: 300px" />
+          <img src="src/sl6.jpeg" style="width: 300px" />
+          <img src="src/sl7.jpeg" style="width: 300px" />
+          <img src="src/sl8.jpeg" style="width: 300px" />
+        </div>
+        <button class="imgBT prev"><</button
+        ><button class="imgBT next">></button>
+      </div>
+    </div>
 
     <div class="portfolio page">
       <span>velog : velog.io/@jiwonyyy</span><br />
@@ -43,9 +61,10 @@
       />
       <input type="email" placeholder="메일주소" required />
       <input type="text" placeholder="문의 내용" required />
-      <button>메일 보내기</button>
+      <button id="sendBT">메일 보내기</button>
     </div>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="contact.js"></script>
+    <script type="text/javascript" src="imgslide.js"></script>
   </body>
 </html>
