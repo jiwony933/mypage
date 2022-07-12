@@ -14,22 +14,38 @@
       <span id="menu-portfolio">Portfolio</span>
       <span id="menu-contact">Contact</span>
     </div>
-    <div class="main page">
+    <div class="home page">
       <img width="200" src="src/jw-heart.png" />
       <span>
-        안녕하세요, 반가워요! 제이름은 김지원입니다! 제 공간에 오신 것을
-        환영합니다.
+        <p>안녕하세요, 반가워요!</p>
+        <p>제이름은 김지원입니다!</p>
+        <p>제 공간에 오신 것을 환영합니다.</p>
       </span>
     </div>
-    <div class="who page"></div>
+    <div class="who page">Kim Jiwon</div>
 
     <div class="portfolio page">
       <span>velog : velog.io/@jiwonyyy</span><br />
       <span>github : https://github.com/jiwony933</span>
       <img width="80%" src="https://ghchart.rshah.org/jiwony933" />
     </div>
-    <div class="contact page"></div>
+    <div class="contact page">
+      <span>궁금한 점이 있으시면 메일을 보내주세요!</span>
 
+      <input type="text" placeholder="성함" required />
+      <input
+        id="telNo"
+        type="tel"
+        placeholder="연락처 010-1234-5678"
+        pattern="[0-9]{2-3}-[0-9]{3,4}-[0-9]{3,4}"
+        maxlength="13"
+        required
+      />
+      <input type="email" placeholder="메일주소" required />
+      <input type="text" placeholder="문의 내용" required />
+      <button>메일 보내기</button>
+    </div>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="contact.js"></script>
   </body>
 </html>
