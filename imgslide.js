@@ -1,7 +1,7 @@
 let imgIndex = 0;
 let position = 0;
 
-const IMAGE_WIDTH = 300;
+const IMAGE_WIDTH = 310;
 
 const btPrev = document.querySelector(".prev");
 const btNext = document.querySelector(".next");
@@ -12,6 +12,7 @@ function prevImg() {
     btNext.removeAttribute("disabled");
     position += IMAGE_WIDTH;
     imgs.style.transform = `translateX(${position}px)`;
+    imgs.style.transition = "transform 330ms ease-in-out";
     imgIndex = imgIndex - 1;
   }
   if (imgIndex == 0) {
@@ -24,6 +25,7 @@ function nextImg() {
     btPrev.removeAttribute("disabled");
     position -= IMAGE_WIDTH;
     imgs.style.transform = `translateX(${position}px)`;
+    imgs.style.transition = "transform 330ms ease-in-out";
     imgIndex = imgIndex + 1;
   }
   if (imgIndex == 8) {

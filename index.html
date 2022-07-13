@@ -27,15 +27,15 @@
       <div class="album">
         <h2>What Makes Me Happy</h2>
         <div class="images">
-          <img src="src/sl0.jpg" style="width: 300px" />
-          <img src="src/sl1.jpeg" style="width: 300px" />
-          <img src="src/sl2.jpeg" style="width: 300px" />
-          <img src="src/sl3.jpeg" style="width: 300px" />
-          <img src="src/sl4.jpg" style="width: 300px" />
-          <img src="src/sl5.jpeg" style="width: 300px" />
-          <img src="src/sl6.jpeg" style="width: 300px" />
-          <img src="src/sl7.jpeg" style="width: 300px" />
-          <img src="src/sl8.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl0.jpg" style="width: 300px" />
+          <img id="favImg" src="src/sl1.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl2.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl3.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl4.jpg" style="width: 300px" />
+          <img id="favImg" src="src/sl5.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl6.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl7.jpeg" style="width: 300px" />
+          <img id="favImg" src="src/sl8.jpeg" style="width: 300px" />
         </div>
         <button class="imgBT prev"><</button
         ><button class="imgBT next">></button>
@@ -49,22 +49,47 @@
     </div>
     <div class="contact page">
       <span>궁금한 점이 있으시면 메일을 보내주세요!</span>
-
-      <input type="text" placeholder="성함" required />
-      <input
-        id="telNo"
-        type="tel"
-        placeholder="연락처 010-1234-5678"
-        pattern="[0-9]{2-3}-[0-9]{3,4}-[0-9]{3,4}"
-        maxlength="13"
-        required
-      />
-      <input type="email" placeholder="메일주소" required />
-      <input type="text" placeholder="문의 내용" required />
-      <button id="sendBT">메일 보내기</button>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="성함" required />
+        <input
+          id="telNo"
+          type="tel"
+          placeholder="연락처 010-1234-5678"
+          maxlength="13"
+          required
+        />
+        <input type="email" id="email" placeholder="메일주소" required />
+        <input type="text" id="message" placeholder="문의 내용" required />
+        <button id="sendBT">메일 보내기</button>
+      </form>
     </div>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="contact.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    >
+      const sendBT = document.querySelector("#sendBT")
+        (function() {
+          emailjs.init("umYBRO476Vh-aKoNrb");
+                sendBT.addEventlistener("click", handleSendClick)
+
+                function handleSendClick (){
+                  const template = {
+                        name: $('#name').val(),
+                        email : $('#email').val(),
+                        telNo : $("#telNo").val(),
+                        message : $('#message').val()};
+
+                 emailjs.send('service_mqodxes', 'template_3kw7mnw', template)
+                 //emailjs.send('service ID', 'template ID > emailjs 페이지에서 만든 템플릿에서 확인이 가능하다', 보낼 내용이 담긴 객체)
+                 	    .then(function(response) {
+                 	       alert('소중한 의견 감사합니다!')
+                 	    }, function(error) {
+                 	       alert('정상적인 제출이 이루어지지 않았습니다.')
+                 	    });
+                }
+           });
+    </script>
     <script type="text/javascript" src="imgslide.js"></script>
   </body>
 </html>

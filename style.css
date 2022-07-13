@@ -14,6 +14,7 @@ body {
   justify-content: space-around;
   font-size: 25px;
   position: fixed;
+  z-index: 2;
 }
 .menu span {
   cursor: url("src/clover-cursor.png"), auto;
