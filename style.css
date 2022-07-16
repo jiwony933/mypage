@@ -39,7 +39,6 @@ body {
 .home {
   display: flex;
   font-size: 30px;
-  line-height: 40%;
   padding-top: 90px;
   box-sizing: border-box;
 }
