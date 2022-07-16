@@ -23,18 +23,17 @@ contactButton.addEventListener("click", handleContactClick);
 
 function handleScroll() {
   let scrollY = this.scrollY;
-  console.log(scrollY);
   if (scrollY >= 0 && scrollY < 400) {
-    document.body.style.backgroundColor = "#76ba99";
+    document.body.style.backgroundColor = "#1B262C";
     document.body.style.transition = "0.5s";
   } else if (scrollY >= 400 && scrollY < 1000) {
-    document.body.style.backgroundColor = "lightblue";
+    document.body.style.backgroundColor = "#0F4C75";
     document.body.style.transition = "0.5s";
   } else if (scrollY >= 1000 && scrollY < 1600) {
-    document.body.style.backgroundColor = "beige";
+    document.body.style.backgroundColor = "#3282B8";
     document.body.style.transition = "0.5s";
   } else if (scrollY >= 1600) {
-    document.body.style.backgroundColor = "lightgrey";
+    document.body.style.backgroundColor = "#BBE1FA";
     document.body.style.transition = "0.5s";
   }
 }

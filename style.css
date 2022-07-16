@@ -1,41 +1,47 @@
 body {
-  background-color: #76ba99;
-  font-family: "Courier New", Courier, monospace;
-  padding: 10px;
+  background-color: #1b262c;
+  font-family: monospace;
 }
 
 .menu {
   background-color: white;
   height: 60px;
-  width: 100%;
-  display: flex;
   border-radius: 30px;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 25px;
-  position: fixed;
-  z-index: 2;
-}
-.menu span {
-  cursor: url("src/clover-cursor.png"), auto;
-}
-.page {
-  height: 600px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  z-index: 2;
+  margin-right: 16px;
+}
+.menu span {
+  cursor: pointer;
+}
+.page {
+  height: 600px;
+  display: grid;
+  /* flex-wrap: wrap; */
+  place-items: center;
+  /* align-content: center;
+  justify-items: center; */
   text-align: center;
   flex-direction: column;
-  vertical-align: middle;
-  padding-top: 80px;
-  border: 0.5px solid;
+  padding-top: 70px;
   box-sizing: border-box;
+  color: white;
 }
 
 .home {
   display: flex;
   font-size: 30px;
   line-height: 40%;
+  padding-top: 90px;
+  box-sizing: border-box;
 }
 
 input {
@@ -43,21 +49,21 @@ input {
   border: none;
   height: 40px;
   width: 250px;
-  margin: 10px;
+  margin: 5px;
   padding-left: 10px;
-  font-size: large;
-  word-break: break-all;
   border-radius: 10px;
 }
 
-#sendBT {
-  background-color: white;
-  border: none;
+#sendBt {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.5px solid;
+  border-color: white;
+  color: white;
   height: 30px;
   width: 100px;
-  box-shadow: 0 3px 3px #999;
+  margin-top: 30px;
 }
-#sendBT:active {
+#sendBt:active {
   background-color: lightgray;
 }
 
@@ -68,5 +74,15 @@ input {
 }
 
 #message {
-  height: 200px;
+  height: 150px;
+}
+
+#portfolioContent {
+  display: block;
+}
+
+#portfolioContent #logo {
+  width: 60x;
+  height: 60px;
+  border-radius: 30px;
 }
